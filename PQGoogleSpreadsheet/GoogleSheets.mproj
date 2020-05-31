@@ -19,7 +19,7 @@
     <SuppressCellErrors>False</SuppressCellErrors>
     <MaxRows>1000</MaxRows>
     <ExtensionProject>Yes</ExtensionProject>
-    <Name>PQGoogleSpreadsheet</Name>
+    <Name>GoogleSheets</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>false</DebugSymbols>
@@ -37,47 +37,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PQGoogleSpreadsheet.pq">
+    <Compile Include="GoogleSheets.pq">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PQGoogleSpreadsheet16.png">
+    <Compile Include="GoogleSheets16.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PQGoogleSpreadsheet20.png">
+    <Compile Include="GoogleSheets20.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PQGoogleSpreadsheet24.png">
+    <Compile Include="GoogleSheets24.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PQGoogleSpreadsheet32.png">
+    <Compile Include="GoogleSheets32.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PQGoogleSpreadsheet40.png">
+    <Compile Include="GoogleSheets40.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PQGoogleSpreadsheet48.png">
+    <Compile Include="GoogleSheets48.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PQGoogleSpreadsheet64.png">
+    <Compile Include="GoogleSheets64.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PQGoogleSpreadsheet80.png">
+    <Compile Include="GoogleSheets80.png">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="resources.resx">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="client_id.txt">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="client_secret.txt">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="PQGoogleSpreadsheet.query.pq">
+    <Content Include="GoogleSheets.query.pq">
       <SubType>Code</SubType>
-    </Content>
-    <Content Include="README.md">
-      <SubType>Content</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
