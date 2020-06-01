@@ -1,5 +1,11 @@
 # Коннектор к Google Spreadsheets для Microsoft Power BI
 
+### Основные преимущества и дополнения:
+- позволяет получать данные из таблиц, не доступных по ссылке,
+- доступно онлайн-обновление в Power BI Service,
+- добавлен выбор аккаунта при подключении к Google таблице.
+
+
 ### Как воспользоваться коннектором:
 
 1) Скачайте файл GoogleSheets.mez: https://github.com/morinad/PQGoogleSpreadsheet/blob/master/GoogleSheets/GoogleSheets.mez
