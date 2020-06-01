@@ -1,6 +1,6 @@
 # Коннектор к Google Spreadsheets для Microsoft Power BI
 
-Как воспользоваться коннектором:
+### Как воспользоваться коннектором:
 
 1) Скачайте файл GoogleSheets.mez: https://github.com/morinad/PQGoogleSpreadsheet/blob/master/PQGoogleSpreadsheet/GoogleSheets.mez
 
@@ -11,7 +11,7 @@
 4) Нажмите на кнопку "Получить данные", в поиске найдите коннектор Google Spreadsheets и укажите ссылку на вашу таблицу, скопировав её из браузера.
 
 
-Как обеспечить полную конфиденциальность данных:
+### Как обеспечить полную конфиденциальность данных:
 
 1) Перейдите в https://console.developers.google.com/apis/ и создайте новый проект.
 2) В разделе "Библиотека" найдите Google Sheets API и включите его в новом проекте.
