@@ -64,44 +64,26 @@ FinishLogin = (context, callbackUri, state) =>
     let
         Parts = Uri.Parts(callbackUri)[Query]
     in
-        TokenMethod(Parts[code]);
+       TokenMethod("authorization_code","code" ,Parts[code]);
 
 
-Refresh = (refresh_token) =>
+
+Refresh = (resourceUrl, refresh_token) => TokenMethod("refresh_token", "refresh_token", refresh_token);
+
+Logout = (token) => "https://accounts.google.com/o/oauth2/revoke?token=" & token;
+
+
+
+TokenMethod = (grantType,tokenField,code) =>
     let
-        Response = Web.Contents("https://oauth2.googleapis.com/token", [
-            Content = Text.ToBinary(Uri.BuildQueryString([
-                client_id = client_id,
+        string1=[client_id = client_id,
                 client_secret = client_secret,
-                refresh_token=refresh_token,
-                grant_type = "refresh_token",
-                redirect_uri = redirect_uri])),
-            Headers=[#"Content-type" = "application/x-www-form-urlencoded", #"Accept" = "application/json"]]),
-        Parts = Json.Document(Response)
-    in
-        Parts;
-
-
-
-Logout = (token) =>
-    let
-        Response = Web.Contents("https://oauth2.googleapis.com/revoke?token="&token, [
-            Content = Text.ToBinary(""),
-            Headers=[#"Content-type" = "application/x-www-form-urlencoded", #"Accept" = "application/json"]]),
-        Parts = Json.Document(Response)
-    in
-        Parts;
-
-
-TokenMethod = (code) =>
-    let
+                grant_type = grantType, 
+                redirect_uri = redirect_uri],
+        string2=Record.AddField(string1,tokenField,code),
+        
         Response = Web.Contents("https://www.googleapis.com/oauth2/v4/token", [
-            Content = Text.ToBinary(Uri.BuildQueryString([
-                client_id = client_id,
-                client_secret = client_secret,
-                code = code,
-                grant_type = "authorization_code",
-                redirect_uri = redirect_uri])),
+            Content = Text.ToBinary(Uri.BuildQueryString(string2)),
             Headers=[#"Content-type" = "application/x-www-form-urlencoded", #"Accept" = "application/json"]]),
         Parts = Json.Document(Response)
     in
