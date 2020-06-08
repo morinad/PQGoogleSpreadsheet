@@ -30,8 +30,8 @@ Google = [
         OAuth = [
             StartLogin = StartLogin,
             FinishLogin = FinishLogin,
-           // Refresh=Refresh,
-	    //Logout = Logout, 
+            Refresh=Refresh,
+	    Logout = Logout, 
             Label = "Google Spreadsheet Auth"
         ]
     ],
