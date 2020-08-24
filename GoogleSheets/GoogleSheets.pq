@@ -3,6 +3,7 @@ section Google;
 
 
 // Constants
+
 client_id = "733411099704-8hukvljco75ti4nkv25if9314r7edtja.apps.googleusercontent.com";
 client_secret = "LXoE9WVFwbkif1L9Y0JN0hOD";
 redirect_uri = "https://preview.powerbi.com/views/oauthredirect.html";
@@ -48,7 +49,7 @@ StartLogin = (resourceUrl, state, display) =>
             client_id = client_id,
             state = state,
             redirect_uri = redirect_uri,
-            prompt="consent",
+            prompt="select_account",
             response_type = "code"])
     in
         [
