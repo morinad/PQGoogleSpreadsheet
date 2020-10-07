@@ -16,9 +16,11 @@ windowHeight = 1000;
 
 shared Google.Spreadsheets = (Table_URL as text) =>
     let
-        finalUrl = Text.BeforeDelimiter(Table_URL, "/", {0, RelativePosition.FromEnd}) & "/export?format=xlsx",
-        content = Web.Contents(finalUrl),
-        excel = Excel.Workbook(content, null, true)
+        gid= Text.From(Text.AfterDelimiter(Table_URL,"gid=")),
+        add = if Text.Length(gid) > 1 then "" else "&gid="&gid,
+        finalUrl = Text.BeforeDelimiter(Table_URL, "/", {0, RelativePosition.FromEnd}) & "/export?format=csv"& add,
+        content =Function.InvokeAfter(()=> Web.Contents(finalUrl), #duration(0,0,0,1)),
+        excel = Csv.Document(content)
     in
         excel;
 
