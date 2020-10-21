@@ -1,5 +1,9 @@
 # Коннектор к Google Spreadsheets для Microsoft Power BI
 
+### Наши курсы по обработке данных:
+1) Курс по коннекторам в Excel (4 часа): https://directprorf.ru/excel?utm_source=github
+2) Большой курс по обработке данных в Power Query (8 часов): https://directprorf.ru/pq?utm_source=github
+
 ### Основные преимущества и дополнения:
 - позволяет получать данные из таблиц, не доступных по ссылке,
 - поддерживает онлайн-обновление в Power BI Service,
