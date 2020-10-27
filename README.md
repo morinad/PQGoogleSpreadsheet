@@ -12,7 +12,7 @@
 
 ### Как воспользоваться коннектором:
 
-1) Скачайте файл GoogleSheets.mez: https://github.com/morinad/PQGoogleSpreadsheet/blob/master/GoogleSheets/GoogleSheets.mez
+1) Скачайте файл GoogleSheets.mez: https://github.com/morinad/PQGoogleSpreadsheet/raw/master/GoogleSheets.mez
 
 2) Поместите файл GoogleSheets.mez в папку C:\Users\USERNAME\Documents\Power BI Desktop\Custom Connectors, подставив USERNAME своего компьютера.
 
