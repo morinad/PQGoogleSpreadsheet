@@ -7,6 +7,7 @@ section Google;
 client_id = "733411099704-8hukvljco75ti4nkv25if9314r7edtja.apps.googleusercontent.com";
 client_secret = "LXoE9WVFwbkif1L9Y0JN0hOD";
 redirect_uri = "https://preview.powerbi.com/views/oauthredirect.html";
+redirect_uri2 ="https://directprorf.ru/oauth";
 windowWidth = 1200;
 windowHeight = 1000;
 
@@ -17,7 +18,7 @@ windowHeight = 1000;
 shared Google.Spreadsheets = (Table_URL as text) =>
     let
         gid= Text.From(Text.AfterDelimiter(Table_URL,"gid=")),
-        add = if Text.Length(gid) > 1 then "" else "&gid="&gid,
+        add = if Text.Length(gid) < 3 then "" else "&gid="&gid,
         finalUrl = Text.BeforeDelimiter(Table_URL, "/", {0, RelativePosition.FromEnd}) & "/export?format=csv"& add,
         content =Function.InvokeAfter(()=> Web.Contents(finalUrl), #duration(0,0,0,1)),
         excel = Csv.Document(content)
