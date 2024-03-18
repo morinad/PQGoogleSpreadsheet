@@ -1,5 +1,7 @@
 # Коннектор к Google Spreadsheets для Microsoft Power BI
 
+### Новые видео, статьи и полезности в Telegram-канале: https://t.me/+2kqVrjV5aXs0NTRi
+
 ### Все коннекторы и поддержка:
 В рамках подписки "ПРО" на Boosty https://boosty.to/morinad вы получите:
 1) Все коннекторы mez для Power BI. 
